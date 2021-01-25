@@ -1,0 +1,4 @@
+#f5a096 → ausgewählter Link
+#f9dac5 → nicht ausgewählter Link
+#fad7c2 → Background 1/nicht ausgewählter Link
+#f5cab6 → Background 2

@@ -1,0 +1,188 @@
+/* DELETABLES */
+
+  .welcome, .brautstyling, .feedback, .referenzen{
+    min-height: 500px;
+  }
+
+  .welcome {
+    background-color: white;
+  }
+
+  .brautstyling {
+    background-color: var(--background-light);
+  }
+
+  .referenzen {
+    background-color: var(--background-dark);
+  }
+
+  .feedback {
+    background-color: white;
+  }
+
+/* ELEMENTS */
+
+a {
+  color: #f9dac5;
+}
+
+a:hover {
+  color: #f5a096;
+}
+
+body {
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Parisienne', cursive;
+}
+
+h1 {
+  font-size: 3.6rem;
+  margin-bottom: 2.6rem;
+}
+
+/* ROOT */
+
+:root {
+  --link-passive: #f9dac5;
+  --link-active: #f5a096;
+  --background-light: rgba(250, 215, 195, 0.8);
+  --background-dark: rgba(245, 200, 180, 0.8);
+  --main-font: 'Spartan', sans-serif;
+  /* font-family: 'Inter', sans-serif;
+  font-family: 'Jost', sans-serif;
+  font-family: 'Manrope', sans-serif;
+  font-family: 'Parisienne', cursive;
+  font-family: 'Syne', sans-serif;*/
+}
+
+/* CLASSES TO HELP */
+
+
+
+.container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: 1fr
+  padding: 5% 7%;
+}
+
+.btn {
+  margin-top: 3rem;
+}
+
+.header .row .col .btn-color {
+  background-color: var(--link-active);
+  border-color: var(--link-active);
+}
+
+.my-btn:hover {
+  background-color: var(--link-active);
+  border-color: var(--link-active);
+}
+
+.my-btn {
+  background-color: var(--link-passive);
+  border-color: var(--link-passive);
+  border-radius: .3rem;
+  color: white;
+  font-size: 1.25rem;
+  margin-top: 3rem;
+  padding: .5rem 1rem;
+  border-style: solid;
+}
+
+.relative {
+  position: relative;
+}
+
+.standard-text {
+  font-family: var(--main-font);
+
+  font-size: 1.4rem;
+  max-width: 750px;
+  margin: auto;
+}
+
+/* CLASSES TOP TO BOTTOM */
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--link-passive);
+  margin: 0 .1rem;
+}
+
+.nav .nav-item .nav-link {
+  color: var(--link-passive);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--link-active);
+}
+
+.nav .nav-item .nav-link:hover {
+  color: var(--link-active);
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--link-active);
+}
+
+.nav .nav-item .nav-link.active {
+  color: var(--link-active);
+}
+
+.navbar-collapse {
+  padding-right: 16px;
+  position: absolute;
+  right: 0;
+}
+
+.header {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+.header.background-image {
+  background: url(../x_Data/Fotos/Sonja-1.jpg);
+  background-size: cover;
+  background-position: right top;
+  width: 100%;
+}
+
+.header-title {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+}
+
+.header-text {
+  padding-left: 8%;
+}
+
+.brautstyling {
+  margin-top: 100vh;
+}
+
+.footer {
+  background-color: #fff;
+  padding: 16px 0;
+}
+
+.fab {
+  color: var(--link-passive);
+  font-size: 2rem;
+  padding: 0 0.2%;
+}
+
+.fab:hover {
+  color: var(--link-active);
+}
+
+.copyright {
+  margin: 0;
+}

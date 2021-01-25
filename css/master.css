@@ -1,0 +1,471 @@
+:root {
+  --link-passive: #f9dac5;
+  --link-active: #f5a096;
+  --background-light: rgba(250, 215, 195, 1);
+  --background-dark: rgba(245, 200, 180, 1);
+  --main-font: 'Spartan', sans-serif;
+  /* font-family: 'Inter', sans-serif;
+  font-family: 'Jost', sans-serif;
+  font-family: 'Manrope', sans-serif;
+  font-family: 'Parisienne', cursive;
+  font-family: 'Syne', sans-serif;*/
+}
+/***********************************************************************
+ *  ELEMENTS
+ **********************************************************************/
+ body {
+   background: rgb(247, 235, 222);
+   font-family: var(--main-font);
+   font-size: 1.4rem;
+   text-align: center;
+   color: #333;
+ }
+
+a {
+
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--main-font);
+  text-transform: uppercase;
+}
+
+li {
+
+}
+
+p {
+
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+/***********************************************************************
+ *  GLOBAL
+ **********************************************************************/
+ .grid-wrapper {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+     grid-gap: 10px;
+ }
+
+ .my-btn {
+   background-color: var(--link-passive);
+   border-color: var(--link-passive);
+   border-radius: .3rem;
+   color: white;
+   font-size: 1.25rem;
+   margin-top: 2rem;
+   padding: .5rem 1rem;
+   border-style: solid;
+ }
+
+ .my-btn:hover {
+   background-color: var(--link-active);
+   border-color: var(--link-active);
+ }
+
+ .section {
+   background: var(--background-light);
+   background: -moz-linear-gradient(top, #FAD7C3 0%, #F5C8B4 100%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FAD7C3), color-stop(100%, #F5C8B4)); /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top, #FAD7C3 0%, #F5C8B4 100%); /* Chrome10+,Safari5.1+ */
+   background: -o-linear-gradient(top, #FAD7C3 0%, #F5C8B4 100%); /* Opera 11.10+ */
+   background: -ms-linear-gradient(top, #FAD7C3 0%, #F5C8B4 100%); /* IE10+ */
+   background: linear-gradient(top, #FAD7C3 0%, #F5C8B4 100%); /* W3C */
+   min-height: 500px;
+   padding: 3% 5%;
+ }
+
+ .sticky {
+   position: fixed;
+ }
+/***********************************************************************
+ *  Nav Bar Old
+ **********************************************************************
+header {
+  background-color: var(--background-dark);
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  color: blue;
+
+}
+
+.nav-toggle {
+  /* display: none; *
+  /* Making it tabbable  *
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(black, .75);
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background-color: var(--background-dark);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 0 1em 1em;
+}
+
+nav a {
+  color: darkgrey;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 350ms ease-in-out 200ms;
+} */
+
+/***********************************************************************
+ *  NAV BAR NEW
+ **********************************************************************/
+ header {
+   width: 100%;
+   position: fixed;
+   top: 0;
+   z-index: 999;
+ }
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 6vh;
+  background-color: #5D4954;
+}
+
+.logo > h1 {
+  color: #ddd;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.nav-links a {
+  color: #ddd;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #ddd;
+  margin: 5px;
+  transition: all .3s ease;
+}
+
+.logo{
+  margin: 0 auto 0  2%;
+}
+
+.logo > h1{
+  margin-top: .5rem;
+}
+/***********************************************************************
+ *  COVER
+ **********************************************************************/
+.cover {
+  height: 100vh;
+  top: 6vh;
+  z-index: -1;
+}
+
+.cover.cover-image {
+  background: url(../x_Data/Fotos/Portrait/Sonja-1.jpg);
+  background-size: cover;
+  background-position: right top;
+  width: 100%;
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.cover-text {
+  height: 50%;
+  max-width: 500px;
+  padding: 0 1%;
+}
+/***********************************************************************
+*  BRAUTSTYLING
+**********************************************************************/
+.brautstyling {
+ height: 500px;
+ margin-top: 100vh;
+}
+/***********************************************************************
+ *  PORTFOLIO
+ **********************************************************************/
+ .portfolio-foto {
+
+ }
+
+ .grid-wrapper > div > img {
+   width: 400px;
+ }
+/***********************************************************************
+*  FEEDBACK
+**********************************************************************/
+/***********************************************************************
+ *  REFERENZEN
+ **********************************************************************/
+ .referenzen > ul {
+   list-style: none;
+   padding-left: 0;
+ }
+
+ .referenzen li {
+   line-height: 2.8rem;
+ }
+
+ .referenzen {
+   background: url(../x_Data/Fotos/Referenzen/21-BG.jpeg), rgba(250, 215, 195, 0.99);
+   background-size: cover;
+   background-position: left top;
+   background-blend-mode: screen;
+
+ }
+
+ .cover.cover-image {
+   background: url(../x_Data/Fotos/Portrait/Sonja-1.jpg);
+   background-size: cover;
+   background-position: right top;
+   width: 100%;
+ }
+/***********************************************************************
+*  FOOTER
+**********************************************************************/
+footer {
+  background: var(--background-dark);
+}
+
+footer > p {
+  margin-bottom: 0;
+  font-size: .7rem;
+}
+/***********************************************************************
+ *  MEDIA QUERY: DESKTOP
+ **********************************************************************
+
+@media screen and (min-width: 900px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(800px, 3fr) 20px;
+  }
+
+  .logo {
+    grid-column: 1 / span 2;
+  }
+
+  nav {
+    /* all: unset;
+    This causes problems with EDGE */
+
+    /* For EDGE support *//*
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+    /* end EDGE support *//*
+
+    grid-column: 3 / 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav li {
+    margin: 0 0 0 3rem;
+  }
+
+  nav ul {
+    display: flex;
+    /* justify-content: flex-end; *//*
+  }
+
+  nav a::before {
+    content: '';
+    display: block;
+    height: 2px;
+    border-radius: 3px;
+    background: black;
+    position: absolute;
+    top: -1.35rem;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 450ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+}
+*/
+@media screen and (max-width:1024px){
+  .nav-links a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width:768px){
+  body{
+    overflow-x: hidden;
+  }
+  .nav-links{
+    position: absolute;
+    right: 0px;
+    height: 94vh;
+    top: 6vh;
+    background-color: #5D4954;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translate(100%);
+    transition: transform .5s ease-in;
+  }
+  .nav-links li{
+    opacity: 0;
+  }
+  .burger{
+    display: block;
+  }
+}
+
+.nav-active{
+  transform: translate(0);
+}
+
+@keyframes navLinkFade{
+  from{
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to{
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2{
+  opacity: 0;
+}
+
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px,-6px);
+}
