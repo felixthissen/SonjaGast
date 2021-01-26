@@ -3,6 +3,14 @@
   --link-active: #f5a096;
   --background-light: rgba(250, 215, 195, 1);
   --background-dark: rgba(245, 200, 180, 1);
+  --accent-dark: rgb(93, 73, 84);
+  --accent-dark2: rgb(142, 86, 101);
+  --accent-dark2-transparent: rgba(142, 86, 101, .8);
+  --accent-dark3: rgb(142, 68, 101);
+  --accent-light: #D999AB;
+  --accent-sonja-light: rgb(255, 159, 158);
+  --accent-sonja-light2: rgb(255, 125, 141);
+  --accent-sonja-dark: rgba(225, 120, 120, .7);
   --main-font: 'Spartan', sans-serif;
   /* font-family: 'Inter', sans-serif;
   font-family: 'Jost', sans-serif;
@@ -16,19 +24,23 @@
  body {
    background: rgb(247, 235, 222);
    font-family: var(--main-font);
+   font-weight: 300;
    font-size: 1.4rem;
    text-align: center;
-   color: #333;
+   color: var(--accent-dark2);
  }
 
 a {
 
-
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--main-font);
-  text-transform: uppercase;
+  font-family: 'Parisienne', cursive;
+  /* font-family: 'Mr De Haviland', cursive; */
+  /* font-family: 'Sacramento', cursive; */
+  /* text-transform: uppercase; */
+  color: var(--accent-sonja-light);
+  font-size: 4rem;
 }
 
 li {
@@ -54,29 +66,30 @@ ul{
  }
 
  .my-btn {
-   background-color: var(--link-passive);
-   border-color: var(--link-passive);
+   background-color: var(--accent-sonja-light);
+   border-color: var(--accent-sonja-light);
    border-radius: .3rem;
    color: white;
    font-size: 1.25rem;
    margin-top: 2rem;
    padding: .5rem 1rem;
    border-style: solid;
+   transition: 450ms;
  }
 
  .my-btn:hover {
-   background-color: var(--link-active);
-   border-color: var(--link-active);
+   background-color: var(--accent-sonja-light2);
+   border-color: var(--accent-sonja-light2);
  }
 
  .section {
    background: var(--background-light);
-   background: -moz-linear-gradient(top, #FAD7C3 0%, #F5C8B4 100%); /* FF3.6+ */
-   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FAD7C3), color-stop(100%, #F5C8B4)); /* Chrome,Safari4+ */
-   background: -webkit-linear-gradient(top, #FAD7C3 0%, #F5C8B4 100%); /* Chrome10+,Safari5.1+ */
-   background: -o-linear-gradient(top, #FAD7C3 0%, #F5C8B4 100%); /* Opera 11.10+ */
-   background: -ms-linear-gradient(top, #FAD7C3 0%, #F5C8B4 100%); /* IE10+ */
-   background: linear-gradient(top, #FAD7C3 0%, #F5C8B4 100%); /* W3C */
+   background: -moz-linear-gradient(top, #FFEEE1 0%, #FFDCC8 100%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFEEE1), color-stop(100%, #FFDCC8)); /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top, #FFEEE1 0%, #FFDCC8 100%); /* Chrome10+,Safari5.1+ */
+   background: -o-linear-gradient(top, #FFEEE1 0%, #FFDCC8 100%); /* Opera 11.10+ */
+   background: -ms-linear-gradient(top, #FFEEE1 0%, #FFDCC8 100%); /* IE10+ */
+   background: linear-gradient(top, #FFEEE1 0%, #FFDCC8 100%); /* W3C */
    min-height: 500px;
    padding: 3% 5%;
  }
@@ -208,11 +221,12 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 6vh;
-  background-color: #5D4954;
+  background-color: var(--accent-dark);
+  background-color: var(--accent-sonja-dark);
 }
 
 .logo > h1 {
-  color: #ddd;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 20px;
@@ -230,7 +244,8 @@ nav {
 }
 
 .nav-links a {
-  color: #ddd;
+  color: #fff;
+  text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1px;
   font-weight: 600;
@@ -245,7 +260,7 @@ nav {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: #ddd;
+  background-color: #fff;
   margin: 5px;
   transition: all .3s ease;
 }
