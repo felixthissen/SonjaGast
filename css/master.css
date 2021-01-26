@@ -10,7 +10,8 @@
   --accent-light: #D999AB;
   --accent-sonja-light: rgb(255, 159, 158);
   --accent-sonja-light2: rgb(255, 125, 141);
-  --accent-sonja-dark: rgba(245, 140, 140, .7);
+  --accent-sonja-dark: rgba(255, 160, 160, .8);
+  --accent-sonja-dark-rgb: rgb(245, 140, 140);
   --main-font: 'Spartan', sans-serif;
   /* font-family: 'Inter', sans-serif;
   font-family: 'Jost', sans-serif;
@@ -464,6 +465,10 @@ footer > p {
   .burger{
     display: block;
   }
+}
+
+.logo{
+  width: 180px;
 }
 
 .nav-active{
