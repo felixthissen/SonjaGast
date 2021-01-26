@@ -221,7 +221,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 6vh;
-  background-color: var(--accent-dark);
+  background-color: var(--accent-sonja-dark);
   background-color: var(--accent-sonja-dark);
 }
 
@@ -442,7 +442,7 @@ footer > p {
     right: 0px;
     height: 94vh;
     top: 6vh;
-    background-color: #5D4954;
+    background-color: var(--accent-sonja-dark);
     display: flex;
     flex-direction: column;
     align-items: center;
