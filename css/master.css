@@ -11,7 +11,7 @@
   --accent-sonja-light: rgb(255, 159, 158);
   --accent-sonja-light2: rgb(255, 125, 141);
   --accent-sonja-dark: rgba(255, 160, 160, .8);
-  --accent-sonja-dark-rgb: rgb(245, 140, 140);
+  --accent-sonja-dark-rgb: rgb(255, 160, 160);
   --main-font: 'Spartan', sans-serif;
   /* font-family: 'Inter', sans-serif;
   font-family: 'Jost', sans-serif;
@@ -32,7 +32,13 @@
  }
 
 a {
+  text-decoration: none;
+  color: var(--accent-sonja-light);
+}
 
+a:hover {
+  color: var(--accent-sonja-light2);
+  text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -359,12 +365,15 @@ nav {
 *  FOOTER
 **********************************************************************/
 footer {
-  background: var(--background-dark);
+  background: var(--background-light);
+  padding: 30px 0 15px 0;
 }
 
 footer > p {
   margin-bottom: 0;
-  font-size: .7rem;
+  margin-top: 15px;
+  font-size: .8rem;
+  font-weight: 600;
 }
 /***********************************************************************
  *  MEDIA QUERY: DESKTOP
