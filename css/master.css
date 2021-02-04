@@ -354,6 +354,18 @@ nav {
   transition:.8s ease-in-out;
 }
 
+.gallery-item .image .btm-align{
+  object-position: 100% 65%;
+}
+
+.gallery-item .image .left-align{
+  object-position: 73% 50%;
+}
+
+.gallery-item .image .right-align{
+  object-position: 45% 50%;
+}
+
 .gallery-item:hover .image img{
   transform: scale(1.2);
 }
