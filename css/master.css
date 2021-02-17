@@ -22,8 +22,6 @@
 /***********************************************************************
  *  ELEMENTS
  **********************************************************************/
-
-
  body {
    background: rgb(247, 235, 222);
    font-family: var(--main-font);
@@ -104,12 +102,15 @@ ul{
    background: -o-linear-gradient(top, #FFEEE1 0%, #FFDCC8 100%); /* Opera 11.10+ */
    background: -ms-linear-gradient(top, #FFEEE1 0%, #FFDCC8 100%); /* IE10+ */
    background: linear-gradient(top, #FFEEE1 0%, #FFDCC8 100%); /* W3C */
-   min-height: 500px;
-   padding: 3% 5%;
+   padding: 10%;
  }
 
  .sticky {
    position: fixed;
+ }
+
+ .text-section{
+   padding: 10% 20%;
  }
 /***********************************************************************
  *  Nav Bar Old
@@ -319,7 +320,6 @@ nav {
 *  BRAUTSTYLING
 **********************************************************************/
 .brautstyling {
- height: 500px;
  margin-top: 100vh;
 }
 /***********************************************************************
@@ -451,6 +451,28 @@ nav {
 /***********************************************************************
 *  FEEDBACK
 **********************************************************************/
+
+
+.carousel-item h6{
+  font-family: var(--main-font);
+  font-size: 1rem;
+  margin-bottom: .5rem;
+  font-style: italic;
+}
+
+.carousel-item{
+  padding: 2% 25% 8%;
+}
+
+.testimonial-image{
+  border-radius: 50%;
+  width: 200px;
+  margin-bottom: 4%;
+}
+
+.testimonial-text{
+
+}
 /***********************************************************************
  *  REFERENZEN
  **********************************************************************/
