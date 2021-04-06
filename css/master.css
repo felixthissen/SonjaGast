@@ -96,13 +96,15 @@ ul{
 
  .section {
    background: var(--background-light);
-   background: -moz-linear-gradient(top, #FFEEE1 0%, #FFDCC8 100%); /* FF3.6+ */
-   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFEEE1), color-stop(100%, #FFDCC8)); /* Chrome,Safari4+ */
-   background: -webkit-linear-gradient(top, #FFEEE1 0%, #FFDCC8 100%); /* Chrome10+,Safari5.1+ */
-   background: -o-linear-gradient(top, #FFEEE1 0%, #FFDCC8 100%); /* Opera 11.10+ */
-   background: -ms-linear-gradient(top, #FFEEE1 0%, #FFDCC8 100%); /* IE10+ */
-   background: linear-gradient(top, #FFEEE1 0%, #FFDCC8 100%); /* W3C */
+   background: -moz-linear-gradient(top, #FEECDC /*#FFEEE1*/ 0%, #FDE0CE/*#FFDCC8*/ 100%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FEECDC/*#FFEEE1*/), color-stop(100%, #FDE0CE/*#FFDCC8*/)); /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top, #FEECDC/*#FFEEE1*/ 0%, #FDE0CE/*#FFDCC8*/ 100%); /* Chrome10+,Safari5.1+ */
+   background: -o-linear-gradient(top, #FEECDC/*#FFEEE1*/ 0%, #FDE0CE/*#FFDCC8*/ 100%); /* Opera 11.10+ */
+   background: -ms-linear-gradient(top, #FEECDC/*#FFEEE1*/ 0%, #FDE0CE/*#FFDCC8*/ 100%); /* IE10+ */
+   background: linear-gradient(top, #FEECDC/*#FFEEE1*/ 0%, #FDE0CE/*#FFDCC8*/ 100%); /* W3C */
    padding: 10%;
+   /*#FEECDF bis #FDE2CF*/
+   /*#FEEFE0 bis #FDE0CE*/
  }
 
  .sticky {
@@ -112,115 +114,81 @@ ul{
  .text-section{
    padding: 10% 20%;
  }
-/***********************************************************************
- *  Nav Bar Old
- **********************************************************************
-header {
-  background-color: var(--background-dark);
-  width: 100%;
-  text-align: center;
+
+
+ /***********************************************************************
+  *  COOKIE CONTAINER
+  **********************************************************************/
+ .cookie-container {
   position: fixed;
-  top: 0;
-  z-index: 999;
-}
-
-.logo {
-  color: blue;
-
-}
-
-.nav-toggle {
-  /* display: none; *
-  /* Making it tabbable  *
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important;
-}
-
-.nav-toggle:focus ~ .nav-toggle-label {
-  outline: 3px solid rgba(black, .75);
-}
-
-.nav-toggle-label {
-  position: absolute;
-  top: 0;
+  bottom: -100%;
   left: 0;
-  margin-left: 1rem;
-  height: 100%;
-  display: flex;
-  align-items: center;
+  right: 0;
+  background: var(--background-light);
+  color: var(--accent-dark2);
+  padding: 20px 32px 0;
+  /*box-shadow: 0 -2px 16px var(--background-light);*/
+  font-size: 16px;
+  transition: 400ms;
 }
 
-nav {
-  position: absolute;
-  text-align: left;
-  top: 100%;
-  left: 0;
-  background-color: var(--background-dark);
-  width: 100%;
-  transform: scale(1, 0);
-  transform-origin: top;
-  transition: transform 400ms ease-in-out;
+.cookie-container.active {
+  bottom: 0;
 }
 
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  display: block;
-  background: white;
-  height: 2px;
-  width: 2em;
-  border-radius: 2px;
-  position: relative;
+.cookie-container a {
+  color: var(--accent-dark2);
 }
 
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  content: '';
-  position: absolute;
+.cookie-btn {
+  background: var(--accent-sonja-light);
+  border: 0;
+  color: #f5f6fa;
+  padding: 8px 12px;
+  font-size: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.nav-toggle-label span::before {
-  bottom: 7px;
+/***********************************************************************
+ *  FAQ
+ **********************************************************************/
+.section > .accordion{
+  max-width: 800px;
 }
 
-.nav-toggle-label span::after {
-  top: 7px;
+.btn.focus, .btn:focus{
+  box-shadow: none; /*0 0 0 0.2rem var(--accent-sonja-dark);*/
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.btn-link{
+  color: white;
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 18px;
 }
 
-nav li {
-  margin: 0 0 1em 1em;
+.btn-link:hover{
+  color: white;
 }
 
-nav a {
-  color: darkgrey;
-  text-decoration: none;
-  font-size: 1rem;
-  text-transform: uppercase;
-  opacity: 0;
-  transition: opacity 150ms ease-in-out;
+ .card-body {
+   text-align: left;
+ }
+
+ .card{
+  border: 1px solid var(--background-light);
+ }
+
+ .accordion>.card>.card-header {
+ background-color: var(--accent-sonja-dark);
 }
 
-nav a:hover {
-  color: black;
-  text-decoration: none;
+.faq{
+  max-width: 800px;
+  margin: auto;
 }
-
-.nav-toggle:checked ~ nav {
-  transform: scale(1, 1);
-}
-
-.nav-toggle:checked ~ nav a {
-  opacity: 1;
-  transition: opacity 350ms ease-in-out 200ms;
-} */
-
 /***********************************************************************
  *  NAV BAR NEW
  **********************************************************************/
@@ -235,7 +203,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh;
+  height: 9vh;
   background-color: var(--accent-sonja-dark);
   background-color: var(--accent-sonja-dark);
 }
@@ -282,7 +250,7 @@ nav {
 
 .logo{
   margin: 0 auto 0  2%;
-  width: 200px;
+  width: 260px;
 }
 
 .logo > h1{
@@ -293,15 +261,17 @@ nav {
  **********************************************************************/
 .cover {
   height: 100vh;
-  top: 8vh;
+  top: 9vh;
   z-index: -1;
 }
 
 .cover.cover-image {
-  background: url(../x_Data/Fotos/Portrait/Sonja-1.jpg);
+  background: url(../x_Data/Fotos/Portrait/Sonja-1.jpg), rgba(253, 220, 200, .2);
   background-size: cover;
   background-position: right top;
+  background-blend-mode: darken;
   width: 100%;
+  /*luminosity, darken, multiply*/
 }
 
 .flex-wrapper {
@@ -321,6 +291,11 @@ nav {
 **********************************************************************/
 .brautstyling {
  margin-top: 100vh;
+}
+
+.test{
+  max-width: 800px;
+  margin: auto;
 }
 /***********************************************************************
  *  PORTFOLIO
@@ -493,12 +468,7 @@ nav {
 
  }
 
- .cover.cover-image {
-   background: url(../x_Data/Fotos/Portrait/Sonja-1.jpg);
-   background-size: cover;
-   background-position: right top;
-   width: 100%;
- }
+
 
  .referenz-bild{
    border-radius: 50%;
@@ -600,8 +570,8 @@ footer > p {
   .nav-links{
     position: absolute;
     right: 0px;
-    height: 92vh;
-    top: 8vh;
+    height: 91vh;
+    top: 9vh;
     background-color: var(--accent-sonja-dark);
     display: flex;
     flex-direction: column;
@@ -616,11 +586,11 @@ footer > p {
   .burger{
     display: block;
   }
+  .logo{
+    width: 180px;
+  }
 }
 
-.logo{
-  width: 180px;
-}
 
 .nav-active{
   transform: translate(0);

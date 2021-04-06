@@ -1,0 +1,5 @@
+1. Kleine Bilder Versionen einfügen
+2. Feedback Bilder Quadratisch
+3. Seite Brautstyling: wie auf Flyer
+4. Seite Kontakt: Kontakt-Formular
+5. Seite Portfolio: Bilder anpassen
